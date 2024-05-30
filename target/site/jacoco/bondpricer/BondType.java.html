@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BondType.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bondpricer</a> &gt; <a href="index.source.html" class="el_package">bondpricer</a> &gt; <span class="el_source">BondType.java</span></div><h1>BondType.java</h1><pre class="source lang-java linenums">package bondpricer;
+
+import java.time.LocalDate;
+import java.time.MonthDay;
+
+/**
+ * The {@code BondType} enum represents different types
+ * of bonds along with their details.
+ */
+<span class="fc" id="L10">public enum BondType {</span>
+
+    /**
+     * Represents the R186 bond type.
+     */
+<span class="fc" id="L15">    R186(new BondDetails(LocalDate.of(2026, 12, 21), 10.5, MonthDay.of(6, 21),</span>
+<span class="fc" id="L16">        MonthDay.of(12, 21), MonthDay.of(6, 11), MonthDay.of(12, 11))),</span>
+
+    /**
+     * Represents the R2032 bond type.
+     */
+<span class="fc" id="L21">    R2032(new BondDetails(LocalDate.of(2032, 3, 31), 8.25, MonthDay.of(3, 31),</span>
+<span class="fc" id="L22">        MonthDay.of(9, 30), MonthDay.of(3, 21), MonthDay.of(9, 20)));</span>
+
+     /**
+     * The bond details associated with the bond type.
+     */
+
+    private final BondDetails bondDetails;
+
+    /**
+     * Constructs a {@code BondType} enum with the specified bond details.
+     *
+     * @param bondDetails the bond details
+     */
+<span class="fc" id="L35">    BondType(final BondDetails bondDetails) {</span>
+<span class="fc" id="L36">        this.bondDetails = bondDetails;</span>
+<span class="fc" id="L37">    }</span>
+
+    /**
+     * Gets the bond details associated with this bond type.
+     *
+     * @return the bond details
+     */
+    public BondDetails getBondDetails() {
+<span class="fc" id="L45">        return bondDetails;</span>
+    }
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
